@@ -12,7 +12,7 @@ public class Main {
             while (num % 2 != 0) {
                 num += 5;
                 cnt--;
-                if (cnt < 0) {  // num > n 대신 cnt < 0 사용
+                if (cnt < 0) {
                     System.out.println(-1);
                     return;
                 }
@@ -23,3 +23,4 @@ public class Main {
         System.out.println(cnt);
     }
 }
+
