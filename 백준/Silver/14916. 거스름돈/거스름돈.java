@@ -1,26 +1,24 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        long n = Integer.parseInt(br.readLine());
-        long cnt = n / 5;
-        long num = n % 5;
-
+        int n = Integer.parseInt(br.readLine());
+        
+        int cnt = n / 5;
+        int num = n % 5;
+        
         if (num != 0) {
             while (num % 2 != 0) {
                 num += 5;
-                cnt -= 1;
-
-                if (num > n) {
+                cnt--;
+                if (cnt < 0) {  // num > n 대신 cnt < 0 사용
                     System.out.println(-1);
                     return;
                 }
             }
         }
-
+        
         cnt += num / 2;
         System.out.println(cnt);
     }
