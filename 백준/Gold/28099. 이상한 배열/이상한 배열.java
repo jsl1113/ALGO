@@ -58,7 +58,7 @@ public class Main{
             }
 
             if (isWeirdArray(A, N)) {
-                sb.append("Yes\n");
+                sb.append("Yes\n"); 
             } else {
                 sb.append("No\n");
             }
